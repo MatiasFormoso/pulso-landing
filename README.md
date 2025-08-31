@@ -2,13 +2,6 @@
 
 Estructura mínima (sin diseño) para iterar rápido y **convertir**. Todo en HTML/CSS/JS plano.
 
-## Cómo usar
-1. Descargá el .zip y descomprimí la carpeta `pulso-landing/` en tu proyecto web (por ejemplo: `~/Sites/pulso-landing` o dentro de tu repo).
-2. Abrí `index.html` en el navegador.
-3. Editá `assets/placeholder-demo.svg` con una captura real cuando la tengas.
-4. Reemplazá el teléfono de WhatsApp en `script.js` y `index.html` si hace falta: actualmente `5493512345678`.
-5. El texto está en español y es **feíto** a propósito; vamos a estilizar más adelante en `styles.css`.
-
 ## Secciones incluidas
 - Nav con CTA
 - Hero con valor + CTA + demo placeholder
