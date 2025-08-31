@@ -1,0 +1,423 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Pulso 09:00 — Informes automáticos por WhatsApp</title>
+  <meta name="description" content="Informes por WhatsApp a las 09:00 con pedidos, ingresos, pagos rechazados, pedidos pendientes y stock bajo. Implementación 24–48 h, calibrado 1:1 con tu panel. Integraciones: Shopify, Tiendanube, Woo y Sheets/CSV.">
+  <meta property="og:title" content="Pulso 09:00 — Informes automáticos por WhatsApp">
+  <meta property="og:description" content="Resumen diario sin paneles. Implementación rápida 24–48 h. Calibración 1:1.">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="./assets/logo.svg">
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+
+  <!-- NAV -->
+  <div class="container nav" id="site-nav">
+    <a href="#top" aria-label="Pulso 09:00 Inicio">
+      <img src="./assets/logo.svg" alt="Pulso 09:00" height="28">
+    </a>
+
+    <!-- Desktop links -->
+    <div class="links nav-desktop" id="navLinks">
+      <a href="#beneficios">Beneficios</a>
+      <a href="#como-funciona">Cómo funciona</a>
+      <a href="#integraciones">Integraciones</a>
+      <a href="#precios">Precios</a>
+      <a href="#faq">Preguntas</a>
+      <a class="btn primary"
+         href="https://wa.me/5493512345678?text=Hola%20Mat%C3%ADas%2C%20quiero%20implementar%20los%20informes%20autom%C3%A1ticos%20por%20WhatsApp.%20Mi%20rubro%20es%3A%20____%20y%20uso%3A%20Shopify%2FTiendanube%2FWoo%2FSheets.%20Horario%20preferido%3A%2009%3A%2000."
+         data-append-utm="1">
+        Quiero implementarlo
+      </a>
+    </div>
+
+    <!-- Mobile toggle -->
+    <button class="nav-toggle" id="navToggle" aria-label="Abrir menú" aria-controls="mobileMenu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+
+  <!-- Mobile full-screen overlay menu -->
+  <aside class="mobile-nav" id="mobileMenu" role="dialog" aria-modal="true" aria-hidden="true">
+    <div class="mobile-sheet">
+      <div class="mobile-head">
+        <img src="./assets/logo.svg" alt="Pulso 09:00" height="24">
+        <button class="close" id="navClose" aria-label="Cerrar menú">✕</button>
+      </div>
+      <nav class="mobile-links">
+        <a href="#beneficios" class="mobile-link">Beneficios</a>
+        <a href="#como-funciona" class="mobile-link">Cómo funciona</a>
+        <a href="#integraciones" class="mobile-link">Integraciones</a>
+        <a href="#precios" class="mobile-link">Precios</a>
+        <a href="#faq" class="mobile-link">Preguntas</a>
+        <a class="btn primary mobile-cta" data-append-utm="1"
+           href="https://wa.me/5493512345678?text=Hola%20Mat%C3%ADas%2C%20quiero%20implementar%20los%20informes%20autom%C3%A1ticos%20por%20WhatsApp.%20Mi%20rubro%20es%3A%20____%20y%20uso%3A%20Shopify%2FTiendanube%2FWoo%2FSheets.%20Horario%20preferido%3A%2009%3A%2000.">
+          Quiero implementarlo
+        </a>
+      </nav>
+    </div>
+  </aside>
+
+  <!-- HERO -->
+  <header id="top" class="hero">
+    <div class="container hero-inner">
+      <div class="hero-copy">
+        <h1>Informes automáticos por WhatsApp a las 09:00</h1>
+        <p>Lo importante sin paneles: <b>pedidos</b>, <b>ingresos</b>, <b>pagos rechazados</b>, <b>pedidos pendientes</b> y <b>stock bajo</b>. Implementación en <b>24–48 h</b>, calibrado 1:1 con tu panel.</p>
+
+        <div class="kpis">
+          <div class="kpi"><b>Pedidos</b><span>hoy / mes</span></div>
+          <div class="kpi"><b>Ingresos</b><span>día y mes</span></div>
+          <div class="kpi"><b>Pagos rechazados</b><span>por día</span></div>
+          <div class="kpi"><b>Pendientes</b><span>en revisión</span></div>
+        </div>
+
+        <div class="cta-row">
+          <a class="btn primary cta-primary"
+             href="https://wa.me/5493512345678?text=Hola%20Mat%C3%ADas%2C%20quiero%20implementar%20los%20informes%20autom%C3%A1ticos%20por%20WhatsApp.%20Mi%20rubro%20es%3A%20____%20y%20uso%3A%20Shopify%2FTiendanube%2FWoo%2FSheets.%20Horario%20preferido%3A%2009%3A%2000."
+             data-append-utm="1">Quiero implementarlo</a>
+          <a class="btn outline" href="#muestras">Ver muestras</a>
+        </div>
+
+        <p class="trust">Prueba gratis 14 días · Sin tarjeta · Lo apagás cuando quieras · Si no sirve, no se cobra</p>
+        <p class="note">No cambiás tu stack. Entregamos por WhatsApp (opcional Email/Slack/CSV).</p>
+      </div>
+
+      <div class="hero-visual">
+        <div class="phone-card" role="img" aria-label="Ejemplo de informe diario 09:00">
+          <div class="phone-head">09:00 • Informe diario</div>
+          <ul class="phone-list">
+            <li><b>Pedidos:</b> 18 <span class="up">+5 vs. ayer</span></li>
+            <li><b>Ingresos:</b> $ 245.000 <small>(acum. mes $ 3,8M)</small></li>
+            <li><b>Pagos rechazados:</b> 3</li>
+            <li><b>Pedidos pendientes:</b> 4</li>
+            <li><b>Stock bajo:</b> 6 <span class="muted">productos (2 &lt; 48 h)</span></li>
+          </ul>
+          <div class="phone-actions">
+            <a class="chip" href="https://docs.google.com/spreadsheets/d/1PENDIENTES_DEMO/view" target="_blank" rel="noopener" data-append-utm="1">Ver pendientes (4)</a>
+            <a class="chip" href="https://docs.google.com/spreadsheets/d/1RECHAZADOS_DEMO/view" target="_blank" rel="noopener" data-append-utm="1">Ver rechazados (3)</a>
+          </div>
+          <div class="phone-foot">CSV adjunto si lo necesitás</div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- BENEFICIOS -->
+  <section class="section" id="beneficios">
+    <div class="container">
+      <h2>Beneficios</h2>
+      <div class="grid-3">
+        <div class="card">
+          <h3>Sin paneles</h3>
+          <p>El resumen llega a tu WhatsApp. Menos clics, menos fricción.</p>
+        </div>
+        <div class="card">
+          <h3>Instalación rápida</h3>
+          <p>24–48 h. Integramos, calibramos y listo.</p>
+        </div>
+        <div class="card">
+          <h3>Decisiones a tiempo</h3>
+          <p>Detectá caída de ingresos, cuellos y quiebres de stock antes.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- QUÉ INCLUYE -->
+  <section class="section">
+    <div class="container">
+      <h2>Qué incluye el informe</h2>
+      <div class="grid-2">
+        <div class="card">
+          <ul class="list">
+            <li>Pedidos del día (hoy / mes)</li>
+            <li>Ingresos del día + acumulado del mes</li>
+            <li>Pagos rechazados y pedidos pendientes</li>
+            <li>Stock bajo por producto (umbral configurable)</li>
+            <li>Links a <b>Pendientes</b> y <b>Rechazados</b> (Sheets ahora) listos para accionar</li>
+            <li>Adjunto CSV si aplica</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Canales de entrega</h3>
+          <div class="badges">
+            <span class="badge">WhatsApp (principal)</span>
+            <span class="badge">Email</span>
+            <span class="badge">Slack</span>
+            <span class="badge">CSV</span>
+          </div>
+          <p class="muted">WhatsApp es el canal primario; los demás son opcionales.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- INTEGRACIONES -->
+  <section class="section" id="integraciones">
+    <div class="container">
+      <h2>Integraciones</h2>
+      <div class="badges large">
+        <span class="badge">Shopify</span>
+        <span class="badge">Tiendanube</span>
+        <span class="badge">WooCommerce</span>
+        <span class="badge">Google Sheets</span>
+        <span class="badge">CSV</span>
+        <span class="badge">API propia</span>
+      </div>
+      <p class="muted">¿Otra plataforma? Lo vemos igual.</p>
+    </div>
+  </section>
+
+  <!-- CÓMO FUNCIONA -->
+  <section class="section" id="como-funciona">
+    <div class="container">
+      <h2>Cómo funciona</h2>
+      <div class="steps">
+        <div class="step"><b>1. Conexión</b><span>Conectamos tienda o planilla (lectura). Sin tocar pagos.</span></div>
+        <div class="step"><b>2. Calibración</b><span>Chequeamos números hasta cerrar 1:1 con tu panel.</span></div>
+        <div class="step"><b>3. Entrega diaria</b><span>Enviamos el informe a las 09:00 con alertas claras.</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ONBOARDING -->
+  <section class="section">
+    <div class="container">
+      <h2>Onboarding y requisitos</h2>
+      <table class="table">
+        <tr><th>Tiempo estimado</th><td>24–48 h</td></tr>
+        <tr><th>Accesos</th><td>Lectura a plataforma o export/sheets. Sin credenciales sensibles.</td></tr>
+        <tr><th>Horario</th><td>09:00 (configurable)</td></tr>
+        <tr><th>Formato</th><td>WhatsApp + opcional Email/Slack y CSV</td></tr>
+      </table>
+    </div>
+  </section>
+
+  <!-- PRECIOS + ROI -->
+  <section class="section prices" id="precios">
+    <div class="container">
+      <h2>Precios y ahorro</h2>
+
+      <!-- ROI -->
+      <div class="card roi">
+        <div class="roi-head">
+          <h3>¿Cuánto te cuesta “mirar paneles” cada mañana?</h3>
+          <span class="pill pill-save" id="roi-pill">Tu gasto oculto estimado: —</span>
+        </div>
+
+        <form id="roi-form" class="roi-form" onsubmit="return false;">
+          <label>Minutos por mañana</label>
+          <input type="number" id="roi-min" value="20" min="0" step="5" inputmode="numeric">
+
+          <label>Días laborables por mes</label>
+          <input type="number" id="roi-days" value="22" min="0" step="1" inputmode="numeric">
+
+          <label>Valor hora de quien lo hace</label>
+          <div class="roi-row">
+            <input type="text" id="roi-currency" value="USD" class="currency" aria-label="Moneda">
+            <input type="number" id="roi-hourly" value="18" min="0" step="1" inputmode="numeric">
+          </div>
+
+          <div class="roi-result">
+            <div>
+              <small>Horas/mes</small>
+              <div id="roi-hours" class="roi-kpi">—</div>
+            </div>
+            <div>
+              <small>Ahorro mensual estimado</small>
+              <div id="roi-saved" class="roi-kpi">—</div>
+              <div class="roi-sub muted">(+ ventas recuperadas <span id="roi-recovered">—</span>)</div>
+            </div>
+          </div>
+
+          <!-- Supuestos opcionales para calcular ventas recuperadas -->
+          <details class="roi-advanced">
+            <summary>Incluir ventas recuperadas (opcional)</summary>
+            <div class="roi-adv-grid">
+              <label>Ticket promedio</label>
+              <div class="roi-row">
+                <input type="text" id="roi-currency-ticket" value="USD" class="currency" aria-label="Moneda ticket">
+                <input type="number" id="roi-ticket" value="25" min="0" step="1" inputmode="numeric">
+              </div>
+
+              <label>Pedidos recuperados por mes</label>
+              <input type="number" id="roi-recov" value="3" min="0" step="1" inputmode="numeric">
+            </div>
+          </details>
+
+          <div class="roi-result2">
+            <div>
+              <small>Impacto neto con Plan Base</small>
+              <div id="roi-net-base" class="roi-kpi">—</div>
+            </div>
+            <div>
+              <small>Impacto neto con Plan Plus</small>
+              <div id="roi-net-plus" class="roi-kpi">—</div>
+            </div>
+          </div>
+
+          <!-- COPY corregido y consistente -->
+          <p class="muted"><b>Impacto neto = ahorro + recuperadas − precio.</b> Si es ≥ 0, <b>se paga solo</b>. Elegí el plan y listo.</p>
+        </form>
+      </div>
+
+      <!-- PLANES -->
+      <div class="pricing">
+        <!-- BASE -->
+        <div class="price-card">
+          <span class="flag flag-right">14 días gratis</span>
+          <h3>Base</h3>
+          <div class="price"><span class="js-price-base">USD 29 / mes</span></div>
+          <p class="price-sub"><b>15% OFF</b> con tarjeta → <span class="muted">USD 24.65 / mes</span></p>
+          <ul class="list">
+            <li>1 fuente (tienda o sheet)</li>
+            <li>Informe diario 09:00</li>
+            <li>Links a pendientes/rechazados (Sheets)</li>
+            <li>Calibración inicial 1:1</li>
+            <li>Soporte por WhatsApp</li>
+            <li>Sin permanencia · on/off cuando quieras</li>
+          </ul>
+          <div class="actions">
+            <a class="btn primary" data-append-utm="1"
+               href="https://wa.me/5493512345678?text=Hola%20Mat%C3%ADas%2C%20quiero%20arrancar%20la%20prueba%20gratis%20de%2014%20d%C3%ADas%20del%20Plan%20Base%20(USD%2029%2Fmes).%20Plataforma%3A%20____.">Activar prueba 14 días</a>
+            <a class="btn outline" data-append-utm="1"
+               href="https://wa.me/5493512345678?text=Hola%20Mat%C3%ADas%2C%20quiero%20activar%20el%20Plan%20Base%20con%20tarjeta%20(15%%20OFF).%20Plataforma%3A%20____.">Con tarjeta (–15%)</a>
+          </div>
+          <p class="muted mini">¿Sin tarjeta? Link de pago mensual.</p>
+        </div>
+
+        <!-- PLUS -->
+        <div class="price-card highlight">
+          <span class="flag flag-left solid">Recomendado</span>
+          <span class="flag flag-right">14 días gratis</span>
+          <h3>Plus</h3>
+          <div class="price"><span class="js-price-plus">USD 49 / mes</span></div>
+          <p class="price-sub"><b>15% OFF</b> con tarjeta → <span class="muted">USD 41.65 / mes</span></p>
+          <ul class="list">
+            <li>2–3 fuentes</li>
+            <li>Links a pendientes/rechazados (Sheets)</li>
+            <li>Alertas adicionales</li>
+            <li>CSV automatizado</li>
+            <li>Soporte por WhatsApp</li>
+            <li>Sin permanencia · on/off cuando quieras</li>
+          </ul>
+          <div class="actions">
+            <a class="btn primary" data-append-utm="1"
+               href="https://wa.me/5493512345678?text=Hola%20Mat%C3%ADas%2C%20quiero%20arrancar%20la%20prueba%20gratis%20de%2014%20d%C3%ADas%20del%20Plan%20Plus%20(USD%2049%2Fmes).%20Fuentes%3A%20____.">Activar prueba 14 días</a>
+            <a class="btn outline" data-append-utm="1"
+               href="https://wa.me/5493512345678?text=Hola%20Mat%C3%ADas%2C%20voy%20con%20el%20Plan%20Plus%20con%20tarjeta%20(15%%20OFF).%20Fuentes%3A%20____.">Con tarjeta (–15%)</a>
+          </div>
+          <p class="muted mini">¿Sin tarjeta? Link de pago mensual.</p>
+        </div>
+      </div>
+
+      <p class="muted center">Cotizamos integraciones especiales por WhatsApp según fuentes, volumen y complejidad.</p>
+    </div>
+  </section>
+
+  <!-- MUESTRAS -->
+  <section class="section" id="muestras">
+    <div class="container">
+      <h2>Muestras</h2>
+      <div class="grid-3">
+        <div class="card sample">
+          <h3>Mensaje diario</h3>
+          <div class="phone-card compact">
+            <div class="phone-head">09:00 • Informe diario</div>
+            <ul class="phone-list">
+              <li><b>Pedidos:</b> 18 <span class="up">+5</span></li>
+              <li><b>Ingresos:</b> $ 245.000</li>
+              <li><b>Pagos rechazados:</b> 3</li>
+              <li><b>Pedidos pendientes:</b> 4</li>
+              <li><b>Stock bajo:</b> 6 <span class="muted">productos</span></li>
+            </ul>
+            <div class="phone-actions">
+              <a class="chip" href="https://docs.google.com/spreadsheets/d/1PENDIENTES_DEMO/view" target="_blank" rel="noopener" data-append-utm="1">Ver pendientes</a>
+              <a class="chip" href="https://docs.google.com/spreadsheets/d/1RECHAZADOS_DEMO/view" target="_blank" rel="noopener" data-append-utm="1">Ver rechazados</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="card sample">
+          <h3>Alerta de stock</h3>
+          <ul class="list tight">
+            <li>Remera Negra M · stock 3 (mín. 5)</li>
+            <li>Jeans Slim 42 · stock 2 (mín. 5)</li>
+            <li>Zapatilla Run 41 · stock 1 (mín. 4)</li>
+          </ul>
+        </div>
+
+        <div class="card sample">
+          <h3>CSV diario</h3>
+          <div class="csv-card">
+            <div class="csv-head">pedidos, ingresos, rechazados, pendientes, stock_bajo</div>
+            <div class="csv-row">2025-08-26,245000,3,4,6</div>
+            <div class="csv-row">2025-08-25,223000,4,5,7</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section" id="faq">
+    <div class="container">
+      <h2>Preguntas frecuentes</h2>
+      <div class="faq">
+        <details open><summary>¿Qué pasa si los números no coinciden?</summary><p>Calibramos hasta 1:1 con tu panel. No avanzamos si no cierra.</p></details>
+        <details><summary>¿Puedo elegir otro horario?</summary><p>Sí, configurable.</p></details>
+        <details><summary>¿Necesitan acceso administrador?</summary><p>No. Con lectura/export alcanza.</p></details>
+        <details><summary>¿Se puede pausar o cancelar?</summary><p>Sí, sin drama. Si no sirve, lo apagás y no se cobra.</p></details>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACTO -->
+  <section class="section" id="contacto">
+    <div class="container">
+      <h2>¿Listo para probar?</h2>
+      <p>Dejanos tus datos o escribinos directo por WhatsApp.</p>
+      <form id="lead-form" class="form">
+        <input type="text" name="nombre" placeholder="Nombre (opcional)">
+        <input type="email" name="email" placeholder="Email (opcional)">
+        <input type="tel" name="telefono" placeholder="Teléfono / WhatsApp *" required>
+        <select name="plataforma" required>
+          <option value="" selected disabled>Plataforma *</option>
+          <option>Shopify</option><option>Tiendanube</option><option>WooCommerce</option><option>Google Sheets</option><option>CSV</option><option>Otra</option>
+        </select>
+        <textarea name="comentarios" rows="3" placeholder="Comentarios"></textarea>
+        <button type="submit" class="btn primary">Enviar por WhatsApp</button>
+        <button type="button" class="btn outline" data-copy-wa="https://wa.me/5493512345678?text=Hola%20Mat%C3%ADas%2C%20quiero%20implementar%20los%20informes%20autom%C3%A1ticos%20por%20WhatsApp.%20Mi%20rubro%20es%3A%20____%20y%20uso%3A%20Shopify%2FTiendanube%2FWoo%2FSheets.%20Horario%20preferido%3A%2009%3A%2000.">Copiar link de WhatsApp</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- STICKY CTA -->
+  <div class="sticky-cta hidden" id="stickyCta">
+    <div class="container inner">
+      <span><b>Pulso 09:00</b> — informes automáticos por WhatsApp</span>
+      <a class="btn primary" data-append-utm="1" href="https://wa.me/5493512345678?text=Hola%20Mat%C3%ADas%2C%20quiero%20implementar%20los%20informes%20autom%C3%A1ticos%20por%20WhatsApp.%20Mi%20rubro%20es%3A%20____%20y%20uso%3A%20Shopify%2FTiendanube%2FWoo%2FSheets.%20Horario%20preferido%3A%2009%3A%2000.">Quiero implementarlo</a>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="container cols">
+      <div>
+        <p><b>Pulso 09:00</b></p>
+        <p class="muted">Informes automáticos por WhatsApp. Integraciones con Shopify, Tiendanube, Woo y Sheets.</p>
+      </div>
+      <div>
+        <p class="muted">Sitio <b>diseñado para conversión (UX/CRO)</b>.</p>
+        <p class="muted">&copy; 2025 Matías Formoso</p>
+      </div>
+    </div>
+  </footer>
+
+  <noscript><div class="container"><small>Con JavaScript deshabilitado, los UTMs y la calculadora de ROI no funcionarán.</small></div></noscript>
+
+  <script src="./script.js"></script>
+</body>
+</html>
