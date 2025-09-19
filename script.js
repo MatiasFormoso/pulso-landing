@@ -1,3 +1,4 @@
+// script.js
 // ===========================
 // Pulso Landing JS (Conversión)
 // ===========================
@@ -179,7 +180,7 @@ Tel: ${tel}
 Plataforma: ${plataforma}
 Comentarios: ${comentarios||'-'}`;
 
-    const wa = new URL('https://wa.me/5493512345678');
+    const wa = new URL('https://wa.me/5493541235829');
     wa.searchParams.set('text', msg);
     const withUtm = appendUtm(wa.toString());
     window.open(withUtm, '_blank', 'noopener');
