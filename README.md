@@ -1,21 +1,24 @@
 # Pulso 09:00 — Landing (skeleton)
 
-Estructura mínima (sin diseño) para iterar rápido y **convertir**. Todo en HTML/CSS/JS plano.
+Estructura mínima, sin frameworks, pensada para iterar rápido y convertir. Código plano **HTML/CSS/JS** con CTAs hacia WhatsApp, secciones claras y copy directo.
 
 ## Secciones incluidas
 - Nav con CTA
-- Hero con valor + CTA + demo placeholder
+- Hero con propuesta de valor + CTA
 - Beneficios
-- Qué incluye
+- Qué incluye el informe
 - Integraciones
 - Cómo funciona (pasos)
-- Onboarding y requisitos (tabla)
-- Precios (3 tarjetas)
-- Testimonios (placeholder)
-- FAQ (details)
-- Formulario de lead que dispara WhatsApp
-- Sticky CTA abajo
-- Footer simple
+- Onboarding / requisitos
+- Precios + calculadora de ROI (estática)
+- Muestras (mensaje diario, alerta de stock, CSV)
+- FAQ
+- Contacto (form lead → WhatsApp)
+- Sticky CTA
+
+## Stack
+- **HTML** + **CSS** + **JavaScript** (sin frameworks)
+- Despliegue recomendado: Vercel/Netlify/Static hosting
 
 ## Funcionalidad
 - Captura UTM y las agrega a los enlaces con `data-append-utm="1"`.
@@ -23,10 +26,4 @@ Estructura mínima (sin diseño) para iterar rápido y **convertir**. Todo en HT
 - Botón para copiar el link de WhatsApp.
 - FAQ que cierra las otras al abrir una.
 
-## Puntos de mejora (próximas iteraciones)
-- Estilos y color (tipografía, espaciado, móvil perfecto).
-- Demo real, logos de integraciones, testimonios reales.
-- Medición (GTM/GA4), mapa de calor.
-- Optimización SEO y OG.
-- A/B test de titulares y CTAs.
 
